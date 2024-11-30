@@ -28,12 +28,12 @@ const OnBoardingScreen = () => {
             />
           ),
           title: (
-            <Text className="text-3xl font-semibold text-gray-800 text-center mb-4">
+            <Text className="text-3xl font-montserrat-extrabold text-gray-800 text-center mb-4">
               Choose Products
             </Text>
           ),
           subtitle: (
-            <Text className="text-base text-gray-600 text-center px-6 mb-8">
+            <Text className="text-base text-[#A8A8A9] font-montserrat-semibold text-center px-6 mb-8">
               Explore our selection and find the perfect products for your
               needs.
             </Text>
@@ -56,12 +56,12 @@ const OnBoardingScreen = () => {
             />
           ),
           title: (
-            <Text className="text-3xl font-semibold text-gray-800 text-center mb-4">
+            <Text className="text-3xl font-montserrat-extrabold text-gray-800 text-center mb-4">
               Make Payment
             </Text>
           ),
           subtitle: (
-            <Text className="text-base text-gray-600 text-center px-6 mb-8">
+            <Text className="text-base text-[#A8A8A9] font-montserrat-semibold text-center px-6 mb-8">
               Complete your purchase quickly and securely with just a few
               clicks.
             </Text>
@@ -84,12 +84,12 @@ const OnBoardingScreen = () => {
             />
           ),
           title: (
-            <Text className="text-3xl font-semibold text-gray-800 text-center mb-4">
+            <Text className="text-3xl font-montserrat-extrabold text-gray-800 text-center mb-4">
               Get Your Order
             </Text>
           ),
           subtitle: (
-            <Text className="text-base text-gray-600 text-center px-6 mb-8">
+            <Text className="text-base text-[#A8A8A9] font-montserrat-semibold text-center px-6 mb-8">
               Relax while we deliver your order straight to your doorstep in no
               time.
             </Text>
@@ -97,10 +97,14 @@ const OnBoardingScreen = () => {
         },
       ]}
       nextLabel={
-        <Text className="text-[#F83758] text-lg font-semibold">Next</Text>
+        <Text className="text-[#F83758] text-lg font-montserrat-semibold">
+          Next
+        </Text>
       }
       skipLabel={
-        <Text className="text-gray-500 text-lg font-semibold">Skip</Text>
+        <Text className="text-gray-500 text-lg font-montserrat-semibold">
+          Skip
+        </Text>
       }
       bottomBarColor="#FDFDFD"
       onSkip={handleSkip}
