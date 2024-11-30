@@ -34,7 +34,7 @@ const IconInput: React.FC<IconInputProps> = ({
         value={value}
         onChangeText={onChangeText}
         keyboardType={keyboardType}
-        className="w-full p-4 border-2 border-gray-300 rounded-lg pl-12 font-montserrat-regular"
+        className="w-full p-4 border-2 border-gray-300 rounded-lg pl-16 font-montserrat-regular"
         style={inputStyle}
         {...rest}
       />
@@ -42,7 +42,12 @@ const IconInput: React.FC<IconInputProps> = ({
         name={iconName}
         size={20}
         color="#B0B0B0"
-        style={{ position: "absolute", left: 16, top: 16 }}
+        style={{
+          position: "absolute",
+          left: 16,
+          top: "50%",
+          transform: [{ translateY: -10 }],
+        }}
       />
     </View>
   );

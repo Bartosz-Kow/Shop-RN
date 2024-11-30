@@ -1,14 +1,27 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, View } from "react-native";
+import { Searchbar } from "react-native-paper";
+import Header from "@/components/header";
 
 const Index = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
-    <View className="">
-      <Text className="text-xl text-center">AAAAA</Text>
-    </View>
+    <>
+      <Header />
+      <View className="flex p-5">
+        <Searchbar
+          placeholder="Search any Product.."
+          onChangeText={(query) => setSearchQuery(query)}
+          value={searchQuery}
+          iconColor="grey"
+          rippleColor="grey"
+          placeholderTextColor="grey"
+          style={{ backgroundColor: "white", borderRadius: 5, color: "grey" }}
+        />
+      </View>
+    </>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default Index;
