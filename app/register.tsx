@@ -1,19 +1,22 @@
 import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
-  TextInput,
   TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
 } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
 import IconsRow from "@/components/register  UI/IconsRow";
+import IconInput from "@/components/register  UI/IconInput";
 
 const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   return (
     <>
       <StatusBar
@@ -35,50 +38,29 @@ const Register = () => {
             <Text className="text-4xl font-montserrat-semibold mb-6 text-left w-full">
               Account
             </Text>
+            <IconInput
+              placeholder="Email"
+              iconName="envelope"
+              value={email}
+              onChangeText={setEmail}
+              keyboardType="email-address"
+            />
 
-            <View className="w-full mb-4 relative">
-              <TextInput
-                placeholder="Email"
-                placeholderTextColor="#B0B0B0"
-                className="w-full p-4 mb-4 border-2 border-gray-300 rounded-lg pl-12 font-montserrat-regular"
-              />
-              <Icon
-                name="envelope"
-                size={20}
-                color="#B0B0B0"
-                style={{ position: "absolute", left: 16, top: 16 }}
-              />
-            </View>
+            <IconInput
+              placeholder="Password"
+              iconName="lock"
+              secureTextEntry
+              value={password}
+              onChangeText={setPassword}
+            />
 
-            <View className="w-full mb-4 relative">
-              <TextInput
-                placeholder="Password"
-                secureTextEntry
-                placeholderTextColor="#B0B0B0"
-                className="w-full p-4 mb-4 border-2 border-gray-300 rounded-lg pl-12 font-montserrat-regular"
-              />
-              <Icon
-                name="lock"
-                size={20}
-                color="#B0B0B0"
-                style={{ position: "absolute", left: 16, top: 16 }}
-              />
-            </View>
-
-            <View className="w-full mb-4 relative">
-              <TextInput
-                placeholder="Confirm Password"
-                secureTextEntry
-                placeholderTextColor="#B0B0B0"
-                className="w-full p-4 mb-4 border-2 border-gray-300 rounded-lg pl-12 font-montserrat-regular"
-              />
-              <Icon
-                name="lock"
-                size={20}
-                color="#B0B0B0"
-                style={{ position: "absolute", left: 16, top: 16 }}
-              />
-            </View>
+            <IconInput
+              placeholder="Confirm Password"
+              iconName="lock"
+              secureTextEntry
+              value={confirmPassword}
+              onChangeText={setConfirmPassword}
+            />
 
             <Text className="text-sm text-center mb-6 font-montserrat-regular">
               By clicking the{" "}
